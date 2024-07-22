@@ -1,0 +1,57 @@
+body {
+  font-family: Roboto;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 50px;
+}
+
+form {
+  margin: 20px 0;
+}
+
+input[type="text"] {
+  width: 20%;
+  margin: 0.5%;
+  padding: 0.5%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #42AAFF;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+
+.forecast {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px;
+  width: calc(100% / 4 - 20px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .forecast {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast {
+    width: 100%;
+  }
+}

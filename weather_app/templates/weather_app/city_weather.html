@@ -1,0 +1,27 @@
+    {% if current_weather %}
+    <h1>{{ current_weather.location }}</h1>
+    <h2>Температура : {{ current_weather.temperature }}°C</h2>
+    <h2>По ощущению : {{ current_weather.apparent_temperature }}°C</h2>
+    <h2>Ветер : {{ current_weather.wind }}</h2>
+    <h2>Осадки : {{ current_weather.precipitation }}</h2>
+    {% endif %}
+
+    {% if forecast_weather %}
+        <h1>Прогноз на 3 дня</h1>
+        <div>
+            {% for forecast in forecast_weather %}
+                <h1>{{ forecast.0.week }}</h1>
+                <div class="forecast-container">
+                    {% for day in forecast %}
+                        <div class="forecast">
+                                <h1>Время : {{ day.time }}</h1>
+                                <h2>Температура : {{ day.temperature }}°C</h2>
+                                <h2>По ощущению : {{ day.apparent_temperature }}°C</h2>
+                                <h2>Ветер : {{ day.wind }} м/c</h2>
+                                <h2>Осадки : {{ day.precipitation }} мм</h2>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
